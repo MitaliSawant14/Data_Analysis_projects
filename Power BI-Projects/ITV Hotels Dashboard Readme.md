@@ -87,7 +87,7 @@ Power BI – Data visualization & dashboard creation
 
 ## 📷 Dashboard Screenshots
 ### Revenue analysis
-![Revenue analysis]()
+![Revenue analysis](https://github.com/MitaliSawant14/Data_Analysis_projects/blob/5ce2344400a8a8af60467ad77f3b7f862fb9d38f/Power%20BI-Projects/Screenshot%202025-09-23%20190422.png)
 
 ### Booking Analysis
 ![Booking Analysis]()
