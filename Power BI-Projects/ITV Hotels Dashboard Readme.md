@@ -93,7 +93,7 @@ Power BI – Data visualization & dashboard creation
 ![Booking Analysis](https://github.com/MitaliSawant14/Data_Analysis_projects/blob/fe228bb1bd4f889b4bc4e999cc85fd92b998f9d3/Power%20BI-Projects/Screenshot%202025-09-23%20190700.png)
 
 ### Cancellation Analysis
-![[Cancellation Analysis]()
+![[Cancellation Analysis](https://github.com/MitaliSawant14/Data_Analysis_projects/blob/2736d59d0c34b29455b89e66eaad4bf85af992d1/Power%20BI-Projects/Screenshot%202025-09-23%20190833.png)
 
 ### Hotal Analysis
 ![[Hhotel Analysis]()
