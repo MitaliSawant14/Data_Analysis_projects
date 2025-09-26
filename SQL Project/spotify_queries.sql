@@ -66,6 +66,7 @@ WHERE skip_flag = 1
 GROUP BY track_name
 ORDER BY skip_count DESC;
 
+
 -- Q9. Artists most frequently skipped
 SELECT artist_name, COUNT(*) AS skip_count
 FROM spotify_history
