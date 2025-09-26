@@ -2,6 +2,7 @@
 This project showcases an Excel Dashboard built to analyze coffee shop sales data.
 The dashboard provides insights into sales performance, customer behavior, and product trends.
 
+
 📌 Project Purpose
 The goal of this project is to:
 
@@ -13,6 +14,7 @@ Excel → Dashboard creation, pivot tables, charts, and slicers.
 CSV Dataset → Raw sales transaction data.
 📊 Key Performance Indicators (KPIs)
 The dashboard highlights the following KPIs:
+
 
 Total Sales → $698,812.33
 Total Transactions → 149,116
