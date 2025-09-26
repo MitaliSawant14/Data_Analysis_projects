@@ -3,7 +3,6 @@
 This project analyzes a large-scale Spotify listening dataset containing ~150k play events. The goal is to uncover user listening patterns, music preferences, and engagement behaviors across tracks, artists, and platforms. Insights from this analysis can support music recommendations, user retention strategies, and platform optimization.
 
 
-
 🛠 Tools Used
 
 Python (Pandas, Matplotlib, Seaborn) → Data cleaning, exploration & visualization
