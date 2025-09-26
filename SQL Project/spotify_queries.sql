@@ -25,7 +25,7 @@ FROM spotify_history
 GROUP BY artist_name, year
 ORDER BY year, total_play_time DESC;
 
--- Q7. Most listened albums
+-- Q4. Most listened albums
 SELECT album_name, SUM(play_time) AS total_play_time
 FROM spotify_history
 GROUP BY album_name
@@ -35,13 +35,13 @@ ORDER BY total_play_time DESC;
 = TIME-BASED LISTENING TRENDS
 ============================================================
 
--- Q10. Time of day when music is most played
+-- Q5. Time of day when music is most played
 SELECT strftime('%H', play_date) AS hour, COUNT(*) AS play_count
 FROM spotify_history
 GROUP BY hour
 ORDER BY play_count DESC;
 
--- Q11. Top 5 songs played on weekends
+-- Q6. Top 5 songs played on weekends
 SELECT track_name, COUNT(*) AS play_count
 FROM spotify_history
 WHERE strftime('%w', play_date) IN ('0','6') -- Sunday=0, Saturday=6
@@ -49,7 +49,7 @@ GROUP BY track_name
 ORDER BY play_count DESC
 LIMIT 5;
 
--- Q12. Top songs played yearly
+-- Q7. Top songs played yearly
 SELECT track_name, strftime('%Y', play_date) AS year, COUNT(*) AS play_count
 FROM spotify_history
 GROUP BY track_name, year
@@ -59,21 +59,21 @@ ORDER BY year, play_count DESC;
 = ENGAGEMENT & SKIP BEHAVIOR
 ============================================================
 
--- Q4. Most skipped songs
+-- Q8. Most skipped songs
 SELECT track_name, COUNT(*) AS skip_count
 FROM spotify_history
 WHERE skip_flag = 1
 GROUP BY track_name
 ORDER BY skip_count DESC;
 
--- Q5. Artists most frequently skipped
+-- Q9. Artists most frequently skipped
 SELECT artist_name, COUNT(*) AS skip_count
 FROM spotify_history
 WHERE skip_flag = 1
 GROUP BY artist_name
 ORDER BY skip_count DESC;
 
--- Q6. Skip rate of popular songs
+-- Q10. Skip rate of popular songs
 SELECT track_name,
        SUM(CASE WHEN skip_flag = 1 THEN 1 ELSE 0 END) * 1.0 / COUNT(*) AS skip_rate
 FROM spotify_history
@@ -85,13 +85,13 @@ ORDER BY skip_rate DESC;
 = DISCOVERY VS. LOYALTY PATTERNS
 ============================================================
 
--- Q8. Count of shuffles and manual plays
+-- Q11. Count of shuffles and manual plays
 SELECT play_type, COUNT(*) AS play_count
 FROM spotify_history
 WHERE play_type IN ('shuffle', 'manual')
 GROUP BY play_type;
 
--- Q9. How often autoplay was used
+-- Q12. How often autoplay was used
 SELECT COUNT(*) AS autoplay_count
 FROM spotify_history
 WHERE play_type = 'autoplay';
